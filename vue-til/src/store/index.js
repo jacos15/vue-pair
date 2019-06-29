@@ -1,38 +1,58 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-// import {} from "../api/index.js";
+import request from "../api/index.js";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    news: {},
+    posts: [],
+    post: {},
     user: {}
   },
   mutations: {
-    setNews(state, news) {
-      state.news = news;
+    setPosts(state, posts) {
+      state.posts = posts;
+    },
+    setPost(state, post) {
+      state.post = post;
     },
     setUser(state, user) {
       state.user = user;
     }
   },
   actions: {
-    FETCH_NEWS(context) {
-      fetchNews()
-        // .then(response => response.data)
-        .then(({ data }) => context.commit("setNews", data))
-        .catch();
+    SIGN_UP(context, username, password, nickname) {
+      request.post('/signup', {
+        username: username,
+        password: password,
+        nickname: nickname
+      }).then((data) => {
+
+      })
     },
-    FETCH_USER(context, userName) {
-      return fetchUser(userName)
-        .then(({ data }) => {
-          console.log("--------------------");
-          console.log(data);
-          return data;
-        })
-        .catch();
+    LOGIN(context, username, password) {
+      request.post('/login', {
+        username: username,
+        password: password
+      }).then((data) => {
+
+      })
+    },
+    POSTS(context) {
+      request.get('/posts').then((data) => {
+
+      })
+    },
+    WRITE_POST(context, title, contents) {
+      request.post('/posts').then((data) => {
+
+      })
+    },
+    GET_POST(context, id) {
+      request.get('/post/' + id).then((data) => {
+        
+      })
     }
-  }
 });
