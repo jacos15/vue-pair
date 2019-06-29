@@ -1,0 +1,11 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.EXPIRATION_DATE = exports.SECRET_KEY = void 0;
+const SECRET_KEY = 'vue-til';
+exports.SECRET_KEY = SECRET_KEY;
+const EXPIRATION_DATE = '100d';
+exports.EXPIRATION_DATE = EXPIRATION_DATE;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb25maWcvaW5kZXguanMiXSwibmFtZXMiOlsiU0VDUkVUX0tFWSIsIkVYUElSQVRJT05fREFURSJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQU8sTUFBTUEsVUFBVSxHQUFHLFNBQW5COztBQUNBLE1BQU1DLGVBQWUsR0FBRyxNQUF4QiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCBTRUNSRVRfS0VZID0gJ3Z1ZS10aWwnO1xuZXhwb3J0IGNvbnN0IEVYUElSQVRJT05fREFURSA9ICcxMDBkJzsiXX0=
